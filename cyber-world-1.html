@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cyber World - Digital Services & Online Solutions, Patkanpura Chauraha, Barabanki, Uttar Pradesh.">
+<title>Cyber World | Digital Services & Online Solutions</title>
+<style>
+:root{--primary:#0b5ed7;--dark:#071a33;--light:#f4f8ff;--text:#172033;--muted:#667085;--success:#16a34a;--white:#fff;--border:#e5eaf2;--shadow:0 10px 30px rgba(15,35,70,.09)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,"Noto Sans Devanagari",sans-serif;color:var(--text);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:23px;font-weight:900;color:var(--dark)}
+.logo span{color:var(--primary)}
+nav{display:flex;gap:22px;align-items:center}
+nav a{font-weight:700;font-size:14px;color:#334155}
+nav a:hover{color:var(--primary)}
+.menu{display:none;border:0;background:none;font-size:28px;cursor:pointer}
+.hero{background:linear-gradient(135deg,#071a33,#0b5ed7);color:white;padding:90px 0 75px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:45px;align-items:center}
+.badge{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:999px;font-size:13px;margin-bottom:18px}
+.hero h1{font-size:clamp(38px,6vw,64px);line-height:1.05;margin-bottom:14px}
+.hero h1 span{color:#8bd0ff}
+.hero h2{font-size:22px;font-weight:500;margin-bottom:16px}
+.hero p{font-size:17px;color:#e7f1ff;max-width:700px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:10px;font-weight:800;border:1px solid transparent;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-white{background:white;color:var(--dark)}
+.btn-wa{background:#19c463;color:white}
+.btn-outline{border-color:rgba(255,255,255,.45);color:white;background:transparent}
+.hero-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:28px;border-radius:22px;box-shadow:var(--shadow)}
+.hero-card .icon{font-size:52px;margin-bottom:10px}
+.hero-card h3{font-size:23px;margin-bottom:10px}
+.hero-card p{font-size:14px}
+section{padding:72px 0}
+.section-head{text-align:center;margin-bottom:38px}
+.section-head .eyebrow{color:var(--primary);font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:1px}
+.section-head h2{font-size:clamp(28px,4vw,40px);margin:5px 0 8px;color:var(--dark)}
+.section-head p{color:var(--muted);max-width:720px;margin:auto}
+.services{background:var(--light)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:white;border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:var(--shadow);transition:.2s}
+.card:hover{transform:translateY(-4px)}
+.service-icon{font-size:30px;margin-bottom:9px}
+.card h3{font-size:17px;margin-bottom:6px}
+.card p{font-size:13px;color:var(--muted)}
+.card .small-btn{display:inline-block;margin-top:13px;color:var(--primary);font-weight:800;font-size:13px}
+.jobs{background:#fff}
+.job-list{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.job{border:1px solid var(--border);border-radius:18px;padding:24px;box-shadow:var(--shadow)}
+.job-top{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}
+.job h3{font-size:20px}
+.tag{background:#eaf2ff;color:var(--primary);padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800;white-space:nowrap}
+.job-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:17px 0;color:#475467;font-size:13px}
+.job-actions{display:flex;gap:9px;flex-wrap:wrap}
+.job-actions .btn{font-size:13px;padding:9px 12px}
+.notice{margin-top:25px;padding:17px;border-radius:12px;background:#fff8e6;border:1px solid #ffe3a3;color:#694b00;font-size:13px}
+.contact{background:linear-gradient(180deg,#f6faff,#eef5ff)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.contact-card{background:white;border:1px solid var(--border);border-radius:18px;padding:28px;box-shadow:var(--shadow)}
+.contact-item{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--border)}
+.contact-item:last-child{border-bottom:0}
+.contact-item .ci{font-size:24px}
+.contact-item strong{display:block;margin-bottom:2px}
+.contact-item small{color:var(--muted)}
+footer{background:var(--dark);color:#dce8f8;padding:42px 0 22px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px}
+footer h3{color:white;margin-bottom:10px}
+footer p,footer a{color:#b7c8df;font-size:14px}
+.footer-links{display:grid;gap:6px}
+.copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:28px;padding-top:18px;text-align:center;color:#91a6c0;font-size:13px}
+.admin-note{background:#0b1729;color:white;padding:60px 0}
+.admin-box{border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:26px;background:rgba(255,255,255,.05)}
+.admin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+.admin-feature{padding:17px;border-radius:12px;background:rgba(255,255,255,.07);font-size:14px}
+.float{position:fixed;right:18px;bottom:18px;z-index:999;display:flex;flex-direction:column;gap:10px}
+.float a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:white;font-size:23px;box-shadow:0 8px 22px rgba(0,0,0,.2)}
+.float .wa{background:#16a34a}.float .call{background:#0b5ed7}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}.job-list,.contact-grid,.footer-grid{grid-template-columns:1fr}.admin-grid{grid-template-columns:repeat(2,1fr)}nav{display:none}.menu{display:block}}
+@media(max-width:560px){.nav{height:64px}.logo{font-size:19px}.hero{padding:62px 0}.hero h1{font-size:42px}.grid{grid-template-columns:1fr}.admin-grid{grid-template-columns:1fr}.job-meta{grid-template-columns:1fr}.ctas .btn{width:100%}.section-head{margin-bottom:28px}section{padding:55px 0}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">🖥️ CYBER <span>WORLD</span></a>
+    <button class="menu" onclick="toggleMenu()" aria-label="Menu">☰</button>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#jobs">Government Jobs</a>
+      <a href="#contact">Contact</a>
+      <a href="#admin">Admin</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">⭐ Fast Service • Trusted Service</div>
+      <h1>CYBER <span>WORLD</span></h1>
+      <h2>Digital Services & Online Solutions</h2>
+      <p>Online Form, Government Job, CSC/E-District, PAN, GST, Business Registration और अन्य Digital Services के लिए आपका आसान और भरोसेमंद समाधान।</p>
+      <div class="ctas">
+        <a class="btn btn-wa" href="https://wa.me/919696151420?text=Namaste%20Cyber%20World%2C%20mujhe%20Digital%20Service%20ki%20jankari%20chahiye." target="_blank">💬 WhatsApp करें</a>
+        <a class="btn btn-white" href="tel:9696151420">📞 अभी Call करें</a>
+        <a class="btn btn-outline" href="#services">🛠️ Services देखें</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="icon">📍</div>
+      <h3>Cyber World</h3>
+      <p>Patkanpura Chauraha, Barabanki, Uttar Pradesh</p>
+      <br>
+      <p>📞 9696151420</p>
+      <p>📧 amitcybercafe079@gmail.com</p>
+      <br>
+      <a class="btn btn-white" href="#contact">Contact Details →</a>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Our Services</div>
+      <h2>🛠️ हमारी प्रमुख सेवाएँ</h2>
+      <p>आपकी जरूरत के अनुसार Online, Digital, CSC और अन्य सेवाएँ एक ही जगह।</p>
+    </div>
+    <div class="grid">
+      <div class="card"><div class="service-icon">🏛️</div><h3>CSC & E-District</h3><p>CSC एवं E-District तथा सरकारी योजनाओं की ऑनलाइन सेवाएँ।</p><a class="small-btn" href="#contact">जानकारी लें →</a></div>
+      <div class="card"><div class="service-icon">📝</div><h3>Online Form Filling</h3><p>Online applications और विभिन्न forms भरने में सहायता।</p><a class="small-btn" href="#contact">WhatsApp करें →</a></div>
+      <div class="card"><div class="service-icon">🪪</div><h3>PAN Card Services</h3><p>PAN Card से संबंधित online services और सहायता।</p><a class="small-btn" href="#contact">जानकारी लें →</a></div>
+      <div class="card"><div class="service-icon">🧾</div><h3>GST Registration</h3><p>GST Registration और business-related online assistance।</p><a class="small-btn" href="#contact">जानकारी लें →</a></div>
+      <div class="card"><div class="service-icon">🏢</div><h3>Business Registration</h3><p>Business registration और digital documentation services।</p><a class="small-btn" href="#contact">WhatsApp करें →</a></div>
+      <div class="card"><div class="service-icon">💳</div><h3>Bill Payment</h3><p>Online bill payment और FASTag recharge services।</p><a class="small-btn" href="#contact">जानकारी लें →</a></div>
+      <div class="card"><div class="service-icon">🚆</div><h3>Train Ticket Booking</h3><p>Train ticket booking के लिए सहायता।</p><a class="small-btn" href="#contact">जानकारी लें →</a></div>
+      <div class="card"><div class="service-icon">✈️</div><h3>Flight Ticket Booking</h3><p>Flight ticket booking services।</p><a class="small-btn" href="#contact">जानकारी लें →</a></div>
+      <div class="card"><div class="service-icon">🏨</div><h3>Hotel Booking</h3><p>Hotel booking के लिए online assistance।</p><a class="small-btn" href="#contact">जानकारी लें →</a></div>
+      <div class="card"><div class="service-icon">📄</div><h3>Resume / CV Making</h3><p>Professional Resume और CV तैयार करने की सेवा।</p><a class="small-btn" href="#contact">WhatsApp करें →</a></div>
+      <div class="card"><div class="service-icon">🎨</div><h3>Graphic Designing</h3><p>Posters, banners, cards और अन्य graphic design services।</p><a class="small-btn" href="#contact">जानकारी लें →</a></div>
+      <div class="card"><div class="service-icon">🖨️</div><h3>Card & PVC Printing</h3><p>Card Printing और PVC Card Printing services।</p><a class="small-btn" href="#contact">जानकारी लें →</a></div>
+      <div class="card"><div class="service-icon">🌐</div><h3>Internet Browsing</h3><p>Internet browsing एवं online digital assistance।</p><a class="small-btn" href="#contact">जानकारी लें →</a></div>
+      <div class="card"><div class="service-icon">📧</div><h3>Email Creation</h3><p>Email account creation और related assistance।</p><a class="small-btn" href="#contact">जानकारी लें →</a></div>
+      <div class="card"><div class="service-icon">💵</div><h3>Cash Withdrawal</h3><p>उपलब्ध banking/authorized services के अनुसार सहायता।</p><a class="small-btn" href="#contact">जानकारी लें →</a></div>
+      <div class="card"><div class="service-icon">💰</div><h3>Cash Deposit</h3><p>उपलब्ध authorized services के अनुसार सहायता।</p><a class="small-btn" href="#contact">जानकारी लें →</a></div>
+      <div class="card"><div class="service-icon">💻</div><h3>Website Services</h3><p>Website-related digital services और सहायता।</p><a class="small-btn" href="#contact">WhatsApp करें →</a></div>
+      <div class="card"><div class="service-icon">📱</div><h3>Other Digital Services</h3><p>अन्य Online एवं Digital Services के लिए संपर्क करें।</p><a class="small-btn" href="#contact">पूछें →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="jobs" id="jobs">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Government Jobs</div>
+      <h2>🏛️ सरकारी नौकरी</h2>
+      <p>यहाँ उपलब्ध सरकारी भर्तियों की महत्वपूर्ण जानकारी और Official Links दिखाए जा सकते हैं।</p>
+    </div>
+    <div class="job-list">
+      <article class="job">
+        <div class="job-top"><div><h3>Government Job Listing</h3><small>Official vacancy details यहाँ दिखाई जाएँगी</small></div><span class="tag">ACTIVE</span></div>
+        <div class="job-meta">
+          <span>🏢 विभाग: Update करें</span><span>👨‍💼 पद: Update करें</span>
+          <span>👥 कुल पद: Update करें</span><span>🎓 योग्यता: Update करें</span>
+          <span>🎂 आयु सीमा: Update करें</span><span>💰 शुल्क: Update करें</span>
+          <span>📅 Start Date: Update करें</span><span>⏰ Last Date: Update करें</span>
+        </div>
+        <div class="job-actions">
+          <a class="btn btn-wa" href="https://wa.me/919696151420?text=Government%20Job%20ki%20jankari%20chahiye." target="_blank">💬 पूछें</a>
+          <a class="btn" style="background:#eaf2ff;color:#0b5ed7" href="#contact">📑 Notification</a>
+          <a class="btn" style="background:#0b5ed7;color:white" href="#contact">🔗 Apply Online</a>
+        </div>
+      </article>
+      <article class="job">
+        <div class="job-top"><div><h3>नई भर्ती जल्द अपडेट होगी</h3><small>Official notification मिलने पर details update करें</small></div><span class="tag">UPDATE</span></div>
+        <div class="job-meta">
+          <span>🎫 Admit Card</span><span>📊 Result</span>
+          <span>📋 Merit List</span><span>📄 Documents</span>
+          <span>📑 Official Notification</span><span>🔗 Apply Online</span>
+        </div>
+        <div class="job-actions">
+          <a class="btn btn-wa" href="https://wa.me/919696151420?text=Government%20Job%20form%20ke%20liye%20madad%20chahiye." target="_blank">💬 आवेदन सहायता</a>
+          <a class="btn" style="background:#0b5ed7;color:white" href="tel:9696151420">📞 Call करें</a>
+        </div>
+      </article>
+    </div>
+    <div class="notice">ℹ️ Government Jobs section में केवल verified/official information और संबंधित official application/notification links publish किए जाएँ।</div>
+  </div>
+</section>
+
+<section class="admin-note" id="admin">
+  <div class="container">
+    <div class="section-head" style="color:white">
+      <div class="eyebrow" style="color:#8bd0ff">Admin Panel</div>
+      <h2 style="color:white">🔐 Admin Login & Control Panel</h2>
+      <p style="color:#b7c8df">Production version में secure server-side authentication के साथ यह panel बनाया जा सकता है।</p>
+    </div>
+    <div class="admin-box">
+      <h3>Admin Features</h3>
+      <div class="admin-grid">
+        <div class="admin-feature">➕ Service Add</div>
+        <div class="admin-feature">✏️ Service Edit</div>
+        <div class="admin-feature">🗑️ Service Delete</div>
+        <div class="admin-feature">🔄 Active / Inactive</div>
+        <div class="admin-feature">➕ नई भर्ती Add</div>
+        <div class="admin-feature">✏️ भर्ती Edit</div>
+        <div class="admin-feature">🔗 Apply Link Update</div>
+        <div class="admin-feature">📑 Notification Link</div>
+        <div class="admin-feature">🎫 Admit Card Link</div>
+        <div class="admin-feature">📊 Result Link</div>
+        <div class="admin-feature">📅 Important Dates</div>
+        <div class="admin-feature">🖼️ Banner / Images</div>
+        <div class="admin-feature">📱 WhatsApp Number</div>
+        <div class="admin-feature">📞 Contact Number</div>
+        <div class="admin-feature">📧 Email Address</div>
+        <div class="admin-feature">📍 Address & Content</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Contact Us</div>
+      <h2>📲 Cyber World से जुड़ें</h2>
+      <p>Online Service चाहिए? Government Job का Form भरना है? किसी Digital Service की जानकारी चाहिए?</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-item"><div class="ci">💬</div><div><strong>WhatsApp</strong><small>Service की जानकारी के लिए WhatsApp करें</small><br><a style="color:#16a34a;font-weight:800" href="https://wa.me/919696151420" target="_blank">9696151420 →</a></div></div>
+        <div class="contact-item"><div class="ci">📞</div><div><strong>Call</strong><small>सीधे Call करके जानकारी प्राप्त करें</small><br><a style="color:#0b5ed7;font-weight:800" href="tel:9696151420">9696151420 →</a></div></div>
+        <div class="contact-item"><div class="ci">📧</div><div><strong>Email</strong><small>Digital/Business enquiry के लिए Email करें</small><br><a style="color:#0b5ed7;font-weight:800" href="mailto:amitcybercafe079@gmail.com">amitcybercafe079@gmail.com →</a></div></div>
+        <div class="contact-item"><div class="ci">📍</div><div><strong>Visit Us</strong><small>Cyber World</small><br>Patkanpura Chauraha, Barabanki, Uttar Pradesh</div></div>
+      </div>
+      <div class="contact-card">
+        <h3 style="font-size:25px;margin-bottom:10px">⭐ Fast Service • Trusted Service</h3>
+        <p style="color:#667085;margin-bottom:20px">Cyber World आपकी Online, Digital एवं सरकारी सेवाओं का आसान समाधान है। किसी भी Service की जानकारी के लिए आज ही संपर्क करें।</p>
+        <div class="ctas">
+          <a class="btn btn-wa" href="https://wa.me/919696151420" target="_blank">💬 WhatsApp करें</a>
+          <a class="btn" style="background:#0b5ed7;color:white" href="tel:9696151420">📞 Call करें</a>
+          <a class="btn" style="background:#eef4ff;color:#0b5ed7" href="mailto:amitcybercafe079@gmail.com">📧 Email करें</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><h3>🖥️ CYBER WORLD</h3><p>Digital Services & Online Solutions</p><p style="margin-top:8px">⭐ Fast Service • Trusted Service</p></div>
+      <div><h3>Quick Links</h3><div class="footer-links"><a href="#home">Home</a><a href="#services">Services</a><a href="#jobs">Government Jobs</a><a href="#contact">Contact</a><a href="#admin">Admin</a></div></div>
+      <div><h3>Contact</h3><p>📞 9696151420</p><p>📧 amitcybercafe079@gmail.com</p><p>📍 Patkanpura Chauraha, Barabanki, Uttar Pradesh</p></div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Cyber World. All Rights Reserved. | Proprietor: Amit</div>
+  </div>
+</footer>
+
+<div class="float">
+  <a class="wa" href="https://wa.me/919696151420" target="_blank" aria-label="WhatsApp">💬</a>
+  <a class="call" href="tel:9696151420" aria-label="Call">📞</a>
+</div>
+
+<script>
+function toggleMenu(){
+  const n=document.getElementById('nav');
+  if(n.style.display==='flex'){n.style.display='none'}
+  else{n.style.display='flex';n.style.position='absolute';n.style.top='64px';n.style.left='0';n.style.right='0';n.style.padding='18px';n.style.background='#fff';n.style.flexDirection='column';n.style.boxShadow='0 12px 25px rgba(0,0,0,.12)'}
+}
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
